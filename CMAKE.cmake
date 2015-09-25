@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 2.6)
+project (CALC)
+
+add_library(core core.hpp)
+add_executable(calc calc.cpp)
+add_executable(post calc2post.cpp)
+add_executable(sexpr calc2sexpr.cpp)
+target_link_libraries(sexpr core)
+target_link_libraries(post core)
+target_link_libraries(calc core)
